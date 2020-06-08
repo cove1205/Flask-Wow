@@ -1,0 +1,27 @@
+language: python
+  - '3.6'
+
+before_install:
+  - pip install --upgrade pip
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest -v
+
+deploy:
+  provider: pypi
+  username: chanagongzi
+  password:
+    secure: WQvd81vdq4rtXy/XQxaJpVtBzhk5Wsq1Zq2ME/WjSbEhoog4H6rTXXCa3zoFDmcgh4CriAhBddV3BZ6x2TSbsCnHYWwXJoA0RbuwSlLEeHoZ4/glXrbnxkVVIXdYjl3zpiAEClj3Ul14b+c1zwkZVidCtzyJzmeEdcHvG0zuRQOeYcEws3AbIQ8eErVXNjSk/lmob5GYjBHBki4JQAuDYco35s/kcxpvXkDteHvKL15ngm54we5aqgcskYe
+      VCppGBcL6GbZpvv5sVpHbjC6JyF7AH7DFBZw7HC9gRpUpOXeMELHvmVlG/61rnYgiotyZiZrltWnmKtxGv0Jcq19EhjPG5cFN1znp4JyJQYQbTeXSeU4hgFhkK6siQuzILcISmN7qciKnPbfszySchUDfhaw64pJ5ZMi6/y6T9xoW97oIFnfhQzHI4SxoNG8QNM5R01q9t2GmMlflZBjUe2sPA4IVYKniKOzwOTQ2VFA2Bh4F82wBU3iyETZ6Pp3ToQ
+      y8rPpUsFMtFR5PS9a32AV0TVH1Pxy1GuYn63RzUd4++L/TrCK7M0RQChWMSqUxMW8llDliTChRIEfBAZQVe9zO3J6nDCt23C27VV4nhnCd10ps8bchPxGQiaNrYSDvrAIU02nQ6QirB90Nm7kPekdjh9vI0LREQq3xdX4bOzFqHbA=
+  distributions: "sdist bdist_wheel" # Your distributions here
+  on:
+    python: 3.6
+    tags: true
+    branch: master
+
+
+
