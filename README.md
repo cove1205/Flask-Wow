@@ -29,7 +29,7 @@ sudo pip3 install flask-wow
 sudo pip3 uninstall flask-wow
 ```
 
-- ### Createa new project
+- ### Create new project
 
   In the directory where you want to create the project, execute the create command, set 'your_ project_name' with your project name.
 
@@ -39,21 +39,29 @@ sudo pip3 uninstall flask-wow
 flask-wow startproject your_project_name -v
 ```
 
+- ### create new app
+
+  into the project folder and run the command
+
+```bash
+cd projecet_name
+
+flask-wow startapp your_app_name 
+```
+
 - New project is created, the directory structure is roughly like this：
 
 ```bash
-/your_project_name -> root folder
-    run.py
-    wsgi.py
-    /requirements
-        requirements_dev.txt
-        requirements_prod.txt
-    /your_project_name
+/some_folder
+    /your_project_name -> root folder
+        run.py  
+        wsgi.py 
         __init__.py
-        config.py
-        handlers.py
-        /utils
-        /apps
+        config.py 
+        handlers.py 
+        requirements.txt 
+        /utils  
+        /apps 
             /demo -> demo folder
                 __init__.py
                 views.py
@@ -63,12 +71,13 @@ flask-wow startproject your_project_name -v
 
 ## ChangeLog
 
+- 0.2.0   add new command to create app、refactor folder structure
+
 - 0.1.0   project init.
 
 ## TODO
 
 - Add Unit Test
-- Add new command to create a new business module
 - Complete demo examples
 - optimization
 

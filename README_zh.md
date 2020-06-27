@@ -32,23 +32,30 @@ sudo pip3 uninstall flask-wow
 ```bash
 flask-wow startproject your_project_name -v
 ```
+- ### 新建app
+
+  进入项目根目录，执行命令
+
+```bash
+cd projecet_name
+
+flask-wow startapp your_app_name 
+```
 
 - -v或者 --venv 选项可以用来告诉程序是否需要创建python虚拟环境
 
 - 这样一个新的项目就创建完成了，目录结构大致是这样：
 
 ```bash
-/your_project_name -> 项目根目录
-    run.py -> 测试用脚本
-    wsgi.py -> 生产环境部署用脚本
-    /requirements -> 依赖配置文件夹，区分开发和生产环境
-        requirements_dev.txt
-        requirements_prod.txt
-    /your_project_name ->
+/some_folder
+    /your_project_name
+        run.py -> 测试用脚本
+        wsgi.py -> 生产环境部署用脚本
         __init__.py
         config.py -> 默认配置文件
         handlers.py -> 中间件和全局错误处理
-        /utils  ->  存放一些工具函数
+        requirements.txt -> 依赖文件
+        /utils  ->  工具函数
         /apps -> 存放业务模块代码
             /demo -> 示例程序
                 __init__.py
@@ -59,18 +66,16 @@ flask-wow startproject your_project_name -v
 
 ## ChangeLog
 
+- 0.2.0   添加新建app的功能、重新构建项目目录
+
 - 0.1.0   project init.
 
 ## TODO
 
 - 增加测试
-- 增加新的命令用来新建业务模块(类似Django中的app)
 - 完善新建项目示例
 - 代码优化
 
 ## Contribution
 
 有任何意见和建议欢迎开issues或者PR,也可以发送邮件cove@happyeyez.com
-
-If you have any ideas or suggestions about this project，please feel free to fork、open issues and send pull requests.
-Or send e-mail to cove@happyeyez.com

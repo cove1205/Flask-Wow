@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from flask_wow import __version__
 
 
@@ -19,17 +19,8 @@ setup(
     license="BSD-3-Clause",
     license_files = "LICENSE.rst",
 
-    # package_dir={'flask_Wow': 'flask_wow'},
-    # packages=find_packages('flask_Wow'),
     packages=["flask_wow"],
     include_package_data=True,
-    # package_data={
-    #     #'flask_wow': ['templates/*'],
-    #     'flask_wow': ['templates/project_tmp/requirements/*']
-    # },
-
-    # data_files=find_data_files('Flask-Wow'),
-
     platforms="any",
     install_requires=[
         'flask>=1.0.2',
