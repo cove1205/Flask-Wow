@@ -5,7 +5,6 @@ from flask_wow import __version__
 with open("README.md", "r", encoding='UTF-8') as fh:
     long_description = fh.read()
 
-
 setup( 
     name="flask-wow",
     version=__version__,
