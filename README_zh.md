@@ -64,7 +64,7 @@ flask-wow startapp your_app_name
     /venv -> 虚拟环境文件夹
 ```
 
-## ChangeLog
+## 更新日志
 
 - 0.2.0   添加新建app的功能、重新构建项目目录
 
@@ -76,6 +76,6 @@ flask-wow startapp your_app_name
 - 完善新建项目示例
 - 代码优化
 
-## Contribution
+## 贡献
 
 有任何意见和建议欢迎开issues或者PR,也可以发送邮件cove@happyeyez.com
